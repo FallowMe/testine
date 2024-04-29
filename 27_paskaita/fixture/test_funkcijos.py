@@ -42,7 +42,7 @@ def mock_gauti_orus_response():
 
 @patch('funkcijos.gauti_orus')
 def test_apsirengti_siltai(mock_gauti_orus, mock_gauti_orus_response):
-    mock_gauti_orus.return_value = 25
+    mock_gauti_orus.return_value = 25 # vietoj 25 galima irasyti   mock_gauti_orus_response['temperatura']
     assert fn.apsirengti_siltai('Vilnius') == False
 
 @pytest.fixture
